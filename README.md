@@ -2,7 +2,7 @@
 
 ## VGGNet
 
-### Jianguo Zhang, April 17, 2017
+
 
 Most of the time we won't want to train a whole convolutional network yourself. Modern ConvNets training on huge datasets like ImageNet take weeks on multiple GPUs. Instead, most people use a pretrained network either as a fixed feature extractor, or as an initial network to fine tune.
 
@@ -47,7 +47,7 @@ To install these dependencies with pip, you can issue `pip3 install -r requireme
 
 ## AlexNet
 
-### Jianguo Zhang, April 20, 2017
+
 
 AlexNet is a popular base network for transfer learning because its structure is relatively straightforward, it's not too big, and it performs well empirically.
 
@@ -77,7 +77,7 @@ Training AlexNet (even just the final layer!) can take a little while, so if you
 
 ## Comparisons of Inceptions(GoogLeNet), ReseNet, VGGnet
 
-### Jianguo Zhang, April 22, 2017. Update in July, 27, 2017
+
 
 ![image5](https://github.com/JianguoZhang1994/Transfer-Learning/blob/master/GoogleNet.gif)
 

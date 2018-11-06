@@ -2,7 +2,7 @@
 
 ## VGGNet
 
-### Jianguo Zhang, April 17, 2017
+
 
 Most of the time we won't want to train a whole convolutional network yourself. Modern ConvNets training on huge datasets like ImageNet take weeks on multiple GPUs. Instead, most people use a pretrained network either as a fixed feature extractor, or as an initial network to fine tune.
 
@@ -11,11 +11,11 @@ In this program, we'll be using [VGGNet](https://arxiv.org/pdf/1409.1556.pdf) tr
 Below is a diagram of the VGGNet architecture.
 
 
-![image1](https://github.com/JianguoZhang1994/Transfer-Learning/blob/master/assets/cnnarchitecture.jpg)
+![image1](https://github.com/RonnieGandhi/Transfer-Learning-On-Popular-Models/blob/master/assets/cnnarchitecture.jpg)
 
 
 
-![image1_1](https://github.com/JianguoZhang1994/Transfer-Learning/blob/master/vgg16.png)
+![image1_1](https://github.com/RonnieGandhi/Transfer-Learning-On-Popular-Models/blob/master/vgg16.png)
 
 VGGNet is great because it's simple and has great performance, coming in second in the ImageNet competition. The idea here is that we keep all the convolutional layers, but replace the final fully connected layers with our own classifier. So what we want are the values of the first fully connected layer, after being ReLUd (self.relu6). This way we can use VGGNet as a feature extractor for our images then easily train a simple classifier on top of that. What we'll do is take the first fully connected layer with 4096 units, including thresholding with ReLUs. We can use those values as a code for each image, then build a classifier on top of those codes.
 
@@ -47,13 +47,11 @@ To install these dependencies with pip, you can issue `pip3 install -r requireme
 
 ## AlexNet
 
-### Jianguo Zhang, April 20, 2017
-
 AlexNet is a popular base network for transfer learning because its structure is relatively straightforward, it's not too big, and it performs well empirically.
 
 Below is a diagram of the AlexNet architecture.
 
-![image](https://github.com/JianguoZhang1994/Transfer-Learning/blob/master/AlexNet_image.png)
+![image](https://github.com/RonnieGanhi/Transfer-Learning-On-Popular-Models/blob/master/AlexNet_image.png)
 
 
 In this program, we extract AlexNet's features and use them to classify images from the [German Traffic Sign Recognition Benchmark dataset](http://benchmark.ini.rub.de/?section=gtsrb&subsection=dataset), which includes 43 classes. The orignal AlexNet classifies for 1000 classes.
@@ -79,9 +77,9 @@ Training AlexNet (even just the final layer!) can take a little while, so if you
 
 ### Jianguo Zhang, April 22, 2017. Update in July, 27, 2017
 
-![image5](https://github.com/JianguoZhang1994/Transfer-Learning/blob/master/GoogleNet.gif)
+![image5](https://github.com/RonnieGandhi/Transfer-Learning-On-Popular-Models/blob/master/GoogleNet.gif)
 
-![image5](https://github.com/JianguoZhang1994/Transfer-Learning/blob/master/GoogleNet_2.jpg)
+![image5](https://github.com/RonnieGandhi/Transfer-Learning-On-Popular-Models/blob/master/GoogleNet_2.jpg)
 
  We will use [Keras](https://keras.io/) to explore feature extraction with the VGG, Inception and ResNet architectures. The models you will use were trained for days or weeks on the ImageNet dataset. Thus, the weights encapsulate higher-level features learned from training on thousands of classes.
 
